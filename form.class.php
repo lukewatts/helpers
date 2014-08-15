@@ -1,6 +1,6 @@
 <?php
 
-require_once( 'vendor/NoCSRF/nocsrf.php' );
+require_once( '../vendor/NoCSRF/nocsrf.php' );
 
 class Form {
 
