@@ -1,5 +1,7 @@
 <?php
 
+require_once( 'vendor/NoCSRF/nocsrf.php' );
+
 class Form {
   
   public function open() {
