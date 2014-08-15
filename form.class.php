@@ -41,7 +41,11 @@ class Form {
 
   }
 
-
+  /**
+   * Generate a hidden field with the current CSRF token.
+   *
+   * @return string  Returns HTML Output
+   */
   public function token( $name = '_token', $value = '' ) {
     
     $this->csrfToken = NoCSRF::generate( '_token',  );
@@ -59,7 +63,7 @@ class Form {
    *
    * @param  string $name  Name of field
    * @param  string $value Value of field
-   * @return string Return HTML output
+   * @return string        Returns HTML output
    */
   public function hidden( $name, $value = null)
   {
