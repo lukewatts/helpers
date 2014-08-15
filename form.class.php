@@ -19,7 +19,7 @@ class Form {
   * @param  string $action Action value
   * @return string         Returns HTML output
   */
-  public function open( $name = '', $method = 'post', $action = '' ) {
+  public function open( $name = '', $action = '', $method = 'post' ) {
     
     $action_name = preg_replace( '.php', '', $action );
 
