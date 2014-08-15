@@ -24,7 +24,7 @@ class Form {
     $action_name = preg_replace( '.php', '', $action );
 
     $output = '<form name="' . $name . '" method="' . $method . '" action="' . $action_name . '.php">' . "\n";
-    $output .= $this->hidden();
+    $output .= $this->token();
 
     return $output;
 
@@ -48,7 +48,7 @@ class Form {
    */
   public function token( $name = '_token', $value = '' ) {
     
-    $this->csrfToken = NoCSRF::generate( '_token',  );
+    $this->csrfToken = NoCSRF::generate( $name );
 
     if ( !isset( $value ) || $value == '' ) {
       $value = $this->csrfToken;
